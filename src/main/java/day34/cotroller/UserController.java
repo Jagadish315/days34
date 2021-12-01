@@ -13,7 +13,7 @@ public class UserController {
 
     @PostMapping("/signup")
     public String signup(@RequestBody User user){
-
+    	
         return loginService.signup(user);
     }
     @PostMapping("/login")
@@ -22,6 +22,7 @@ public class UserController {
     }
     @GetMapping("/test")
     public String test(){
+    	System.out.println("this is conflict example");
         return "this is user testing";
     }
 }
